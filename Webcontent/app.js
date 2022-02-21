@@ -144,3 +144,96 @@ player1.sayHello("Lee");
 
 //function이 object 안에 있을때만 가능하다
 //function의 값은 function 안에서만 존재한다
+
+const calculator = {
+    add: function(a,b){
+    console.log(a+b);
+    },
+    min: function(a,b){
+    console.log(a-b);
+    },
+    mul: function(a,b){
+    console.log(a*b);
+    },
+    div: function(a,b){
+    console.log(a/b);
+    },
+    power: function(a,b){
+    console.log(a**b)
+    },
+    };
+
+    calculator.add(5,5);
+    calculator.min(10,5);
+    calculator.mul(5,5);
+    calculator.div(20,4);
+    calculator.power(2,2);
+
+const age = 96;
+function calculateKrAge(ageOfForeigner){
+    return ageOfForeigner +2;
+}
+
+const krAge = calculateKrAge(age);
+
+console.log(krAge);
+//함수가 그냥 어떤 기능을 수행하는 것이라고 생각하기 보단
+//함수는 어떤 일을 수행하고 그 결과를 알려주는 것
+
+const calculator1 = {
+    add: function(a, b){
+        return a + b;
+    },
+    min: function(a,b){
+        return a-b;
+    },
+    mul: function(a,b){
+        return a*b;
+    },
+    div: function(a,b){
+        return a/b;
+    },
+    power: function(a,b){
+        return a**b;
+    },
+};
+
+const plusResult = 5;
+const minusResult = calculator1.min(plusResult,2);
+const multiResult = calculator1.mul(10,minusResult);
+const divideResult = calculator1.div(multiResult,plusResult);
+const powerResult = calculator1.power(divideResult,minusResult);
+//console.log를 하지 않았기 때문에 아무것도 실행되지 않음
+//function안에서 return과 추가작업을 입력하면
+//return만 작업하고 추가 수행은 이뤄지지 않는다.
+//만약 return 앞에 기타작업이 있다면 이 작업은 수행된다
+//즉, return "까지만" 수행된다
+
+const age1 = parseInt(prompt("How old are you?"));
+//prompt는 사용자에게 창을 띄울 수 있도록 해줌
+//prompt는 javascript를 일시정지 시키고 있다
+//창이 떠 있는 동안엔 javascript는 계속 우릴 기다리고 있다
+console.log(age1);
+//typeof는 데이터의 타입을 볼 수 있게 해준다
+//parseInt()는 String을 number로 변환해준다
+console.log();
+
+if(isNaN(age1) || age1 < 0) {
+    //condition == true
+    console.log("Please write a real positive number");
+} else if (age1 < 18) { //위의 if condition이 false이면 javascript는 이 condition을 확인함
+    //이 condition이 true이면 이 condition을 실행함
+    console.log("You are too young");
+} else if(age1 >= 18 && age1 <= 50){ //And가 하는 역할은 두가지 condition이 true이어야 true라고 함 둘 중 하나라도 false이면 false가 됨
+    console.log("You can drink");
+} else if (age1 > 50 && age1 <=80) {    
+    console.log("You should take care of your health");
+} else if (age1 > 80){
+    console.log("You can do whatever you want");
+    //위의 모든 condition이 false이면 이 condition을 실행함
+    //condition == false
+}
+//==은 값만을 비교하고, ===은 유형도 비교하여 ===를 주로 사용하는 것을 추천
+const title = document.getElementById("title");
+console.log(title);
+title.innerText = "Got you!"
