@@ -209,31 +209,110 @@ const powerResult = calculator1.power(divideResult,minusResult);
 //만약 return 앞에 기타작업이 있다면 이 작업은 수행된다
 //즉, return "까지만" 수행된다
 
-const age1 = parseInt(prompt("How old are you?"));
+// const age1 = parseInt(prompt("How old are you?"));
 //prompt는 사용자에게 창을 띄울 수 있도록 해줌
 //prompt는 javascript를 일시정지 시키고 있다
 //창이 떠 있는 동안엔 javascript는 계속 우릴 기다리고 있다
-console.log(age1);
+// console.log(age1);
 //typeof는 데이터의 타입을 볼 수 있게 해준다
 //parseInt()는 String을 number로 변환해준다
 console.log();
 
-if(isNaN(age1) || age1 < 0) {
-    //condition == true
-    console.log("Please write a real positive number");
-} else if (age1 < 18) { //위의 if condition이 false이면 javascript는 이 condition을 확인함
-    //이 condition이 true이면 이 condition을 실행함
-    console.log("You are too young");
-} else if(age1 >= 18 && age1 <= 50){ //And가 하는 역할은 두가지 condition이 true이어야 true라고 함 둘 중 하나라도 false이면 false가 됨
-    console.log("You can drink");
-} else if (age1 > 50 && age1 <=80) {    
-    console.log("You should take care of your health");
-} else if (age1 > 80){
-    console.log("You can do whatever you want");
-    //위의 모든 condition이 false이면 이 condition을 실행함
-    //condition == false
-}
+// if(isNaN(age1) || age1 < 0) {
+//     //condition == true
+//     console.log("Please write a real positive number");
+// } else if (age1 < 18) { //위의 if condition이 false이면 javascript는 이 condition을 확인함
+//     //이 condition이 true이면 이 condition을 실행함
+//     console.log("You are too young");
+// } else if(age1 >= 18 && age1 <= 50){ //And가 하는 역할은 두가지 condition이 true이어야 true라고 함 둘 중 하나라도 false이면 false가 됨
+//     console.log("You can drink");
+// } else if (age1 > 50 && age1 <=80) {    
+//     console.log("You should take care of your health");
+// } else if (age1 > 80){
+//     console.log("You can do whatever you want");
+//     //위의 모든 condition이 false이면 이 condition을 실행함
+//     //condition == false
+// }
 //==은 값만을 비교하고, ===은 유형도 비교하여 ===를 주로 사용하는 것을 추천
-const title = document.getElementById("title");
-console.log(title);
-title.innerText = "Got you!"
+const h1 = document.getElementById("title");
+//id를 사용하는것이 더 편하긴 하지만 className과 둘 다 사용하는 경우도 있음
+
+const hellos = document.getElementsByClassName("hello");
+console.log(hellos);
+//이건 Array이다.
+//이건 hellos"."으로 뭔가를 가져올 수 없다.
+//왜냐하면 이건 많은 h1이 들어있는 Array이기 때문이다.
+//이건 element를 불러오는 방법 중 하나이다.
+
+//querySelector는 element를 CSS 방식으로 검색할 수 있다.
+//hello란 class 내부에 있는 h1을 가지고 올 수 있다는 것을 의미한다.
+
+function handleTitleClick(){
+    h1.className = "active";
+    // const currentColor = h1.style.color;
+    // let newColor;
+
+    // if(currentColor === "blue") {//h1의 color값이 blue와 일치하는지 확인
+    //     newColor = "tomato";  //h1의 color를 tomato로 바꿔주는 것
+    // } else{
+    //     newColor = "blue";
+    // }
+    // h1.style.color = newColor;
+    //여기에는 getter와 setter가 있다.
+    // console.log(h1.style.color);
+    //여기서는 h1의 color를 획득할 수 있다.
+    // h1.style.color="blue";
+    //여기서는 h1의 color를 설정할 수 있다.
+    // console.log(h1.style.color);
+    //여기서는 h1의 color를 다시 가지고 온다.
+}
+
+function handleMouseLeave(){
+    h1.innerText = "Mouse is gone!";
+}
+
+// function handleWindowResize() {
+//     document.body.style.backgroundColor = "tomato";
+// }
+// //body부분이 제일 중요함
+
+// function handleWindowCopy() {
+//     alert("copier!");
+// }
+
+// function handleWindowOffline() {
+//     alert("SOS no WIFI");
+// }
+
+// function handleWindowOnline() {
+//     alert("Alright Everything is good");
+// }
+
+// h1.onclick = handleTitleClick;
+
+// title.addEventListener("mouseenter",handleMouseEnter);
+// h1.onmouseenter = handleMouseEnter;
+
+//handileTitleClick에 괄호를 넣지 않는것이 중요함
+//우린 실행버튼을 누르길 원하지 않음
+//JavaScript에 function만을 넘겨주고, 유저가 click할 경우에 JavaScript가 실행버튼을 대신 눌러주길 바라는 것
+
+// handleTitlleClick();
+//event를 listen하는 것
+//하지만 JavaScript에 무슨 event를 listen하고 싶은지 알려줘야 함
+//모든 event에 대해서 알고싶은 것이 아니고 단 하나의 event만 알아보고 싶기 때문이다.
+//click event를 listen하고, 이 click event가 발생하면, 우리는 이 handleTitleClick이라는 function이 동작하길 원함
+//여기서 이 function을 실행하지 않게 하는 것이 중요함.
+//내가 원하는 것은, 이 function을 JavaScript에 넘겨주고, 유저가 title을 클릭할 경우에 JavaScript가 실행버튼을 대신 눌러주길 바람
+//내가 직접 실행버튼을 누르지 않고, JavaScript에 이 function을 넘겨서 유저가 title을 click할 경우에, JavaScript가 나 대신 실행버튼을 눌러주게 하는 것
+
+//event를 사용하는 2가지 방법
+//1. title.addEventListener()를 해주고, click을 넘겨주는 것
+//이걸 title.onClick()으로 바꿀 수 있다.
+//eventListener는 나중에 removeEventListener를 통해서 event listener를 제거할 수 있다.
+
+// window.addEventListener("resize",handleWindowResize);
+// window.addEventListener("copy",handleWindowCopy);
+// window.addEventListener("offline",handleWindowOffline);
+// window.addEventListener("online",handleWindowOnline);
+

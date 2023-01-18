@@ -6,3 +6,4 @@ document에는 getElementById라는 함수가 있는데, 이 함수가 HTML에�
 element를 찾고 나면, JS로 해당 HTML의 무엇이든 바꿀 수 있다.
 ex) element의 innerTextr를 바꾼다던가, (title.innerText = "Got you!");
 id, className 등을 가져 올 수 있음. (console.log(title.id);)
+
