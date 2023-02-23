@@ -1,0 +1,11 @@
+JS에는 사실 value를 기억하게 하는 아주 쉬운 방법이 있다
+모든 것은 HTML에서 시작되어야 한다
+우선 HTML을 작성한 다음에 거기 있는 element들을 끌고 오는 것
+그런 다음 JS에서 이런저런 작업을 해 줌
+
+querySelector()를 사용할 때는 대상이 id인지 명확히 해줘야 한다.
+왜냐하면 querySelector()로는 classname, tagname 모두 검색 가능하다.
+하지만 getElementById()를 사용할 때는 그럴 필요가 없다.
+왜냐면 JS가 내가 id를 찾고 있다는 걸 이미 알고 있기 때문이다.
+
+input의 내용을 가져오려면 어떤 property를 찾아봐야 하는지 알아야 함
