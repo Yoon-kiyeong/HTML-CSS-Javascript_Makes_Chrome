@@ -1,0 +1,1 @@
+.length : String의 길이를 구할 수 있음
