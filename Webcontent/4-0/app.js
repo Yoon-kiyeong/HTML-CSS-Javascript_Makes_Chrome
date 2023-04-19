@@ -10,5 +10,4 @@ function handleLoginBtnClick() {
     console.log(loginInput.value);    
 }
 
-loginButton.addEventListener("click",handleLoginBtnClick)
-
+loginButton.addEventListener("click",handleLoginBtnClick);
