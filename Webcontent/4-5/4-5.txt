@@ -1,0 +1,10 @@
+localStorage 브라우저에 무언가를 저장한 후 낮ㅇ에 가져 올 수 있음
+
+localStorage.setItem("username", username);
+
+localStorage.setItem(key, value);
+- 로컬 저장소에 해당 키와 값을 저장함
+localStorage.getItem(key);
+- 로컬 저장소에 해당 키에 해당되는 값을 불러옴
+localStorage.removeItem(key);
+- 로컬 저장소에 해당 키에 해당되는 키, 값을 삭제함.
