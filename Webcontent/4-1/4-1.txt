@@ -1,0 +1,7 @@
+개발자들이 항상 필요한 것들이 있다.
+예시로 classname을 제거하거나, 더하거나, string의 길이를 구하는 것
+항상 user가 입력하는 값의 유효성을 확인하는 것은 좋은 연습
+
+input안에 있는 button을 누르거나 type이 submit인 input을 클릭하면 내가 작성한 form이 submit 된다.
+input을 form안에 넣었을 경우에는 우리가 엔터를 누를때마다 form은 자동적으로 submit되고 있다.
+하지만 이러면 매번 새로고침이 된다. 이 form이 submit되는 걸 막아야 한다.
