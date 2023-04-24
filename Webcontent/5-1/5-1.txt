@@ -1,0 +1,2 @@
+interval = 매번 일어나야 하는 무언가
+setInterval(실행할 함수, 실행할 함수의 주기)
