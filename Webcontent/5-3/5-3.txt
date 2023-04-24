@@ -1,0 +1,8 @@
+number를 String으로 바꾸는 방법은 String()안에 감싸는 방법이 있다.
+
+0>00로 바꾸고 싶을 때는 padStart(x,'y')를 사용하면 된다.
+padStart는 내가 갖고 있는 String을 길게 만들어 주고 싶을 때 사용.
+뒤에서 추가하고 싶을 때는 padEnd를 사용하면 된다.
+x는 원하는 length를, y는 앞에 채워줄 내용을 입력하면 된다.
+
+String(new Date().getHours()).padStart*(2,"0");
