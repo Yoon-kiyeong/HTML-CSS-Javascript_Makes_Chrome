@@ -1,0 +1,8 @@
+quotes배열 안에 각 {}들은 배열 안에 있는 하나의 오브젝트
+Math module은 JS에서 이미 load되어 공짜로 제공되고 있다.
+Math.random은 0 "이상" 1 "미만"의 값을 가지기 때문에, Math.floor를 사용해서 0 ~ n개의 확률을 균등하게 배분하는 것
+Math.ceil은 반올림
+숫자를 천장(ceil)까지 높여주는 것이다.
+Math.floor는 반올림하지 않는다.
+
+[1,2,3,4,5] 이렇게 생긴 Array가 있을 때, Array.length를 사용하면 Array의 길이를 반환해준다.
