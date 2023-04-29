@@ -1,0 +1,27 @@
+1. 입력한 todos를 toDos 배열에 저장.
+2. 저장된 toDos를 JSON>stringify를 이용해 문자열로 localStorage에 저장.
+3. todos를 화면에 출력하기 위해 localStorage에 있는 todos(문자열로 저장됨)를 JSON.parse를 이용해 배열형태로(object타입) 불러와서 저장한다.
+4. 저장한 것을 .forEach()함수를 이용해 각 요소들을 출력한다.
+forEach()는 배열의 각 요소를 출력하는 함수.
+
+arrow function은 기존의 functino과 동일함.
+parsedtodos.forEach((item) ==> console.log("this is the turn of", item))
+
+새로고침을 해도 newtodo를 화면에 띄우고 싶다면, localStorage에 저장되는 newTodo를 가져와야 한다.
+localStorage는 string값만 받는다.
+newTodo는 input.value인데, 어떤 것을 어떻게 입력할지 아무도 모르기에 newTodo 값을 string으로 가져올 순 없다.
+그렇다면 배열의 인덱스 기능을 활용하면 어떨까?
+todos라는 빈 배열을 만들고 newTodo를 받는다.
+newTodo는 input.value다.
+newTodo가 입력될 대마다, toDos배열이 newTodo를 받으면서 localStorage로 들어간다.
+하지만 localsotrage는 string밖에 받지 못한다.
+어떻게 배열인 toDos를 집어넣을 수 있을까?
+배열 자체를 문자열로 바꾼다면 집어 넣을 수는 있지 않을까?
+그래서 JSON.stringify(toDos);로 String이 된 배열이 들어간다.
+하지만 활용할 수는 없다.
+내가 넣은 toDos 배열은 지금 String이다.
+String이 된 toDos를 배열로 가져올 수 없을까?
+그래서 문자열을 객체로 가져올 수 있는 JSON.parse를 사용한다.
+JSON.parse를 사용하기 전에 localstorage에 저장되어 있는 Strng이 된 Todos 배열을 불러 올 수 있게 변수 savedTodos에 저장하고, localStorage의 내장함수 getItem을 사용하여 JSON.parse(savedTodos)를 통한다면 객체화 된 배열을 가져올 수 있ㄱ다.
+하지만, 우리는 배열을 통째로 가져와서 사용할 것이 아니라, 배열 안에 들어있는 값들을 하나씩 사용하고 싶다.
+그래서 forEach() 문을 통해 배열 안의 요소들을 하나씩 데려온다.
