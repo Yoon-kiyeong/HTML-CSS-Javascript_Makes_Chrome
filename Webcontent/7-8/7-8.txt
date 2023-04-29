@@ -1,0 +1,37 @@
+filter 함수를 사용 -> array에서 뭔가를 삭제할 때 실제로 array에서 지우는 것이 아닌 지우고 싶은 item을 빼고 새 array를 만듦(item을 지우는 게 아닌 item을 제외하는 것)
+
+function sexyFilter(){return true} ==> array의 item을 유지하고 싶으면 true를 return!
+[1,2,3,4,5].filter(sexyFilter)
+(5) [1,2,3,4,5]
+
+function sexyFilter(){return false}
+[1,2,3,4,5].filter(sexyFilter)
+[]
+
+function sexyFilter(item) {return item !== 3} ==> item이 3이 아니면 true를 return!
+[1,2,3,4,5].filter(sexyFilter)
+(4) [1,2,4,5]
+
+const arr = ["pizza", "chicken", "hamburger"] -> arr배열에서 hamburger를 지우고 싶다.
+function sexyFilter(food) {return food !== "hamburger"}
+arr.filter(sexyFilter)
+(2) ["pizza", "chicken"]
+
+const arr = [1234, 5656, 454, 343, 12, 4646, 405] ==> 1000보다 큰 수를 모두 제외한다.
+function sexyFilter(num) {return num arr.filter(sexyFilter)}
+(4) [454,343,12,405]
+
+const todos = [{text:"hello"},{text:"Good Morning"}]
+function sexyFilter(todo) {return todo.text != "Good Morning"}
+todos.filter(sexyFilter)
+[{...}]0: {text:'hello'} length:1 [[Prototype]]:Array(0)
+
+-> 함수(sexyFilter)의 argument는 항상 달라도 상관 없음, filter가 각각 todos의 item을 todo의 argument로 넣어 줌
+
+기존의 문제점: X버튼을 눌러서 해당 todo를 삭제할 때 li 태그는 parntElement를 통해 찾아내서 쉽게 삭제할 수 있었지만 LocalStorage 안의 해당 todo 값은 쉽게 찾을 수 없었다.
+
+해결책
+1. LocalStorage에 todo를 추가할 때 텍스트만 추가하는게 아니라 Date.now()를 이용한 현재 시간값을 랜덤 id로 함께 부여한다.
+2. 입력값을 li태그에 집어넣고, 로컬스토리지로 보낼 때 단순히 유저가 입력한 텍스트뿐 아니라 랜덤하게 부여된 id가 같이 포함된 객체를 보내준다.
+3. li태그를 삭제할 때, 삭제되는 li태그로부터 id값을 가져오고 그 id와 일치하는 값을 가진 객체를 로컬스토리지에서 같이 찾아내서 .filter()기능을 통해 걸러낸다
+4. html과 로컬스토리지에서 해당 객체가 동시에 삭제된다
