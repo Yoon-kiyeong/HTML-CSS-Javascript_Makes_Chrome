@@ -1,0 +1,12 @@
+toDos = [toDo1, toDo2,...]
+1. li 생성 시 id를 부여하고, toDo text를 함께 toDos라는 array에 저장
+2. toDos array를 localStorage에 저장
+3. 삭제 시 부여된 id를 통해 button이 클릭된 li만 삭제한 후 toDos array에 다시 저장
+4. localStorage에 3번결과의 array를 다시 저장
+위와 같은 순서로 localStorage에서 원하는 toDo항목을 삭제함을 구현하였다.
+filter함수는 조건을 만족하는 array를 반환함에 유의
+
+toDos = toDds.filter(toDo => toDo.id !== parseInt(li.id));
+toDos 배열이 가진 값에 filter를 통해 삭제를 누른 toDos의 id 값을 제외한 다른 id를 가진 toDOs는 유지시켜줌
+그리고 saveToDos();로 toDos의 제외시킨 값을 다시 보내줘서 localstorage를 다시 불러옴
+
