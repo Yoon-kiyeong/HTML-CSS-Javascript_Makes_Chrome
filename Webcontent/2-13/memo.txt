@@ -1,0 +1,6 @@
+prompt는 사용자에게 창을 띄울 수 있도록 해줌
+prompt는 javascript를 일시정지 시키고 있다, 매우 오래된 방법임
+창이 떠 있는 동안엔 javascript는 계속 우릴 기다리고 있다
+
+typeof는 데이터의 타입을 볼 수 있게 해준다
+parseInt()는 String을 number로 변환해준다
