@@ -1,0 +1,14 @@
+variable : 자바스크립트를 비롯한 모든 프로그래밍 언어에서 varialbe은
+값을 저장하거나 유지하는 역할을 함
+
+const : 상수
+const == constant(상수), constant는 값이 바뀔 수 없다
+
+let myName = "yoon";
+variable에는 공백이 올 수 없음
+공백이 필요한 경우엔 다음 단어의 첫 글자에 대문자를 사용함
+명칭 : camelCase(낙타 등 모양)
+파이썬에서의 명칭 : snake_case(뱀 모양)
+console.log("hello " + myName);
+myName = "Yoonkiyeong";
+console.log("your name is " + myName);
