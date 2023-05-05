@@ -1,0 +1,9 @@
+인수를 받기 위해서 함수를 선언할 때 function 함수면(variable명) {}를 작성한다.
+function의 괄호 안의 매개변수에서 argument를 받아들일 수 있다.
+argument는 하나만 받을 수 있는게 아니라 여러개를 받을 수 있음.
+
+function의 값은 function 안에서만 존재한다.
+
+Object안에서 매개변수가 argument를 받는 방식
+
+NaN == Not a Number(숫자가 아님)
