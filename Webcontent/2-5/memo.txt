@@ -1,0 +1,5 @@
+data type에는 숫자, 문자 말고도
+boolean값으로 true,false가 있다.
+1(On) : true, 0(Off) : false
+null과 false는 다름. false는 false라는 값이 존재, null은 아무 값도 없음
+undefined == 값이 정해지지 않음, null == 값이 없음
