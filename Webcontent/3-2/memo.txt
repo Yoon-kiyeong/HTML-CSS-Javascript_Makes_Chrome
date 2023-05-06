@@ -1,0 +1,16 @@
+브라우저에서 그냥 사용할 수 있는 'document'라는 object를 배웠다.
+documet의 함수 중에는 getElementById라는 함수가 있는데,
+이 함수가 HTML에서 id를 통해 element를 찾아준다.
+element를 찾고 나면, JS로 해당 HTML의 무엇이든 바꿀 수 있다.
+
+document.getElementById("title")은 html에 있는 id를 불러올 수 있다.
+
+JS에서는 html이 표현하는 object를 보여준다.
+
+모든 것들을 html에서 항목들을 가지고 와서 js에서 변경한다
+console.dir("title");
+js에서는 html이 표현하는 object를 보여준다.
+
+title.innerText = "got you"처럼 바꾸기 가능, id를 추가했기 때문
+
+모든 것들을 html에서 항목들을 가지고 와서 js에서 변경한다.
