@@ -1,0 +1,8 @@
+listen하고 싶은 event를 찾는 가장 좋은 방법은, 구글에 찾고 싶은 element의 이름을 검색
+우리는 javascript의 element를 원하니, 링크에 Web APIs라는 문장이 포함된 페이지를 찾는다.
+왜냐하면 이건 JS관점의 HTML Heading Element라는 의미이다.
+
+너무 복잡하면 element를 console.dir로 출력해서 on~ 이라고 적혀있는 걸 사용하면 된다.
+property 이름 앞에 on이 있다면 그게 바로 event listener이다. 사용할 때는 on을 빼고 사용.
+
+하지만 대부분의 경우에는 style은 CSS를 통해 변경되어야 함.
