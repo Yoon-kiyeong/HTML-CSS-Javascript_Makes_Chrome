@@ -1,9 +1,0 @@
-document는 브라우저에 이미 존재하는 object
-우리가 접근할 수 있는 html을 가리키는 객체
-
-우리가 JavaScript로 정보를 가지고 올 수 있는 방법은, document 객체와 element를 가져오는 수 많은 함수들을 이용하는 것
-document에는 getElementById라는 함수가 있는데, 이 함수가 HTML에서 id를 통해 element를 찾아준다.
-element를 찾고 나면, JS로 해당 HTML의 무엇이든 바꿀 수 있다.
-ex) element의 innerTextr를 바꾼다던가, (title.innerText = "Got you!");
-id, className 등을 가져 올 수 있음. (console.log(title.id);)
-
