@@ -12,23 +12,23 @@ const quotes = [
         author: "Tony Stark",
     },
     {
-        quotes: "I Can Do This All Day",
+        quotes: "I Can Do This All Day.",
         author: "Steve Rogers",
     },
     {
-        quotes: "If you're nothing without the suit, you shouldn't have it",
+        quotes: "If you're nothing without the suit, you shouldn't have it.",
         author: "Tony Stark",
     },
     {
-        quotes: "All learning has an emotional base",
+        quotes: "All learning has an emotional base.",
         author: "Plato",
     },
     {
-        quotes: "Who questions much, shall learn much, and retain much",
+        quotes: "Who questions much, shall learn much, and retain much.",
         author: "Francis Bacon",
     },
     {
-        quotes: "The beautiful thing about learning is that no one can take it away from you",
+        quotes: "The beautiful thing about learning is that no one can take it away from you.",
         author: "B.B.King",
     },
     {
@@ -36,7 +36,7 @@ const quotes = [
         author: "Lowell Bennion",
     },
     {
-        quotes: "Never too old to learn",
+        quotes: "Never too old to learn.",
         author: "Isaac Asimov"
     }
 ];
