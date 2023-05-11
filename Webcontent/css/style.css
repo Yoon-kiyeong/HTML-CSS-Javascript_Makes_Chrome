@@ -53,8 +53,8 @@ span {
 
 #todo-form{
     position:absolute;
-    top: 15%;
-    width: 100%;
+    top: 8%;
+    right:16px;
     text-align:center;
 }
 
@@ -68,9 +68,9 @@ span {
 #todo-list li {
     list-style: none;
     position: relative;
-    top: 160px;
-    width:100%;
-    text-align:center;
+    top: 100px;
+    width:97%;
+    text-align:right;
     font-size:20px;
 }
 
